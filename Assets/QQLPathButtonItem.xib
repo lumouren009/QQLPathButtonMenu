@@ -10,30 +10,32 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwF-xl-fPx">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cED-Ff-q2W">
                     <rect key="frame" x="280" y="280" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="40" id="CoD-iQ-9AL"/>
-                        <constraint firstAttribute="height" constant="40" id="sVI-TB-SCQ"/>
+                        <constraint firstAttribute="height" constant="40" id="frb-EM-i4y"/>
+                        <constraint firstAttribute="width" constant="40" id="xJN-jc-J3x"/>
                     </constraints>
+                    <state key="normal" title="Button"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cT4-GP-bms">
-                    <rect key="frame" x="281" y="328" width="38" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB7-Zh-feA">
+                    <rect key="frame" x="279" y="340" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="cT4-GP-bms" firstAttribute="top" secondItem="PwF-xl-fPx" secondAttribute="bottom" constant="8" id="GI5-LC-bdO"/>
-                <constraint firstItem="cT4-GP-bms" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ktf-tC-r9d"/>
-                <constraint firstItem="PwF-xl-fPx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UcI-QA-PdX"/>
-                <constraint firstItem="PwF-xl-fPx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nKo-7f-PYR"/>
+                <constraint firstItem="kB7-Zh-feA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HAq-5S-1lr"/>
+                <constraint firstItem="cED-Ff-q2W" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dM5-Kb-n8X"/>
+                <constraint firstItem="cED-Ff-q2W" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="n3W-Cf-mu3"/>
+                <constraint firstItem="kB7-Zh-feA" firstAttribute="top" secondItem="cED-Ff-q2W" secondAttribute="bottom" constant="20" id="sDE-eX-bkX"/>
             </constraints>
             <connections>
-                <outlet property="button" destination="PwF-xl-fPx" id="OKs-gs-lBc"/>
-                <outlet property="label" destination="cT4-GP-bms" id="uLQ-rr-5Zj"/>
+                <outlet property="button" destination="cED-Ff-q2W" id="YIB-ow-YK0"/>
+                <outlet property="label" destination="kB7-Zh-feA" id="8QE-Cc-Vnt"/>
+                <outlet property="topConstraint" destination="sDE-eX-bkX" id="NPd-h1-dzX"/>
             </connections>
         </view>
     </objects>

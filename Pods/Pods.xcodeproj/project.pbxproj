@@ -32,6 +32,7 @@
 		5F619D03CED915AF91EC4D5206C322E6 /* libQQLPathButtonMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libQQLPathButtonMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		683531E4D20A28D39D16D06361F0602A /* Pods-QQLPathButtonMenu-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QQLPathButtonMenu-resources.sh"; sourceTree = "<group>"; };
 		78D0844DE1858E3B9DABE298995DDFBB /* QQLPathButtonMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QQLPathButtonMenu-prefix.pch"; sourceTree = "<group>"; };
+		807A1B611D3666CD00FB8724 /* QQLPathButtonItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QQLPathButtonItem.xib; sourceTree = "<group>"; };
 		8EEB398C81A8E4912273278F8F1EB139 /* Pods-QQLPathButtonMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QQLPathButtonMenu-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		973F1614574AA0A6D77B79A05824E5A2 /* Pods-QQLPathButtonMenu-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QQLPathButtonMenu-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		CD3EEA1F7176FFD88E1FB660E1C579FD /* QQLPathButtonMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QQLPathButtonMenu-dummy.m"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DB81280E3B1092DFAFFB70682D66FD83 /* QQLPathButtonMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = QQLPathButtonMenu.m; sourceTree = "<group>"; };
-		DB9E7AEF83B76308F21255B657CF1E90 /* QQLPathButtonItem.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = QQLPathButtonItem.xib; sourceTree = "<group>"; };
 		DEA556D955A01D4FA8BC216649E7F64C /* Pods-QQLPathButtonMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QQLPathButtonMenu.release.xcconfig"; sourceTree = "<group>"; };
 		E6242A750F64A0FDF693C91C21244DAF /* Pods-QQLPathButtonMenu-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QQLPathButtonMenu-acknowledgements.plist"; sourceTree = "<group>"; };
 		ED6FF1613798461A6711D451B3E0A647 /* QQLPathButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = QQLPathButtonItem.m; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		DDCF073EE52DD79F20B46E80A9385AC7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				DB9E7AEF83B76308F21255B657CF1E90 /* QQLPathButtonItem.xib */,
+				807A1B611D3666CD00FB8724 /* QQLPathButtonItem.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";

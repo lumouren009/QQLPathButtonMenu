@@ -14,7 +14,6 @@
 @property (nonatomic, assign) NSTimeInterval duration; //动画时长
 @end
 
-
 typedef void (^MenuClickBlock)(NSInteger buttonIndex);
 @interface QQLPathButtonMenu : UIView
 

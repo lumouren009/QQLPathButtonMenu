@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@interface QQLPathButtonItemConfig : NSObject
+@property (nonatomic, assign) CGRect frame;
+@property (nonatomic, assign) CGFloat buttonLabelMargin;
+@end
+
 @interface QQLPathButtonItem : UIView
 //展开时的角度
 @property (nonatomic, assign) double expandAngle;
@@ -19,7 +24,7 @@
 @property (nonatomic, assign) CGPoint endPoint;
 
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *button;
-+ (instancetype)buttonWithFrame:(CGRect)frame
++ (instancetype)buttonWithConfig:(QQLPathButtonItemConfig*)config
                           image:(UIImage*)image
                           title:(NSString*)title;
 @end

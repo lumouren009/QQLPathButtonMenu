@@ -24,20 +24,28 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
   
-  QQLPathButtonItem *pathItem1 = [QQLPathButtonItem buttonWithFrame:CGRectMake(0, 0, 40, 40)                                  image:[UIImage imageNamed:@"PathEdit"] title:@"one"];
+  QQLPathButtonItemConfig *cfg = [[QQLPathButtonItemConfig alloc]init];
+  cfg.frame = CGRectMake(0, 0, 40, 40);
+  cfg.buttonLabelMargin = 10;
+  
+  QQLPathButtonItem *pathItem1 = [QQLPathButtonItem buttonWithConfig:cfg image:[UIImage imageNamed:@"PathEdit"] title:@"one"];
   pathItem1.expandAngle = M_PI_4;
   pathItem1.tag = 1;
   
-    QQLPathButtonItem *pathItem2 = [QQLPathButtonItem buttonWithFrame:CGRectMake(0, 0, 40, 40)                                  image:[UIImage imageNamed:@"PathEdit"] title:@"two"];//  [pathItem2 setBackgroundImage:[UIImage imageNamed:@"PathEdit"] forState:UIControlStateNormal];
+  QQLPathButtonItem *pathItem2 = [QQLPathButtonItem buttonWithConfig:cfg image:[UIImage imageNamed:@"PathEdit"] title:@"two"];
+;//  [pathItem2 setBackgroundImage:[UIImage imageNamed:@"PathEdit"] forState:UIControlStateNormal];
   pathItem2.expandAngle = M_PI_2;
   pathItem2.tag = 2;
   
-   QQLPathButtonItem *pathItem3 = [QQLPathButtonItem buttonWithFrame:CGRectMake(0, 0, 40, 40)                                  image:[UIImage imageNamed:@"PathEdit"] title:@"three"];;//  [pathItem3 setBackgroundImage:[UIImage imageNamed:@"PathEdit"] forState:UIControlStateNormal];
+  QQLPathButtonItem *pathItem3 = [QQLPathButtonItem buttonWithConfig:cfg image:[UIImage imageNamed:@"PathEdit"] title:@"three"];
+;;//  [pathItem3 setBackgroundImage:[UIImage imageNamed:@"PathEdit"] forState:UIControlStateNormal];
+
   pathItem3.tag = 3;
   pathItem3.expandAngle = M_PI_4 * 3;
 
   mainButton = [UIButton buttonWithType:UIButtonTypeCustom];
   mainButton.frame = CGRectMake((self.view.frame.size.width - 72)/2.0, 500, 72, 72);
+
  [mainButton setBackgroundImage:[UIImage imageNamed:@"PathMain"] forState:UIControlStateNormal];
   [self.view addSubview:mainButton];
 
@@ -53,6 +61,7 @@
                                               closeButton:closeButton
                                                menuArrays:@[pathItem1, pathItem2, pathItem3]
                                                    config:config];
+
   pathMenu.menuClickBlock = ^(NSInteger buttonIndex){
     NSLog(@"index %ld", buttonIndex);
   };
