@@ -34,8 +34,10 @@
             </constraints>
             <connections>
                 <outlet property="button" destination="cED-Ff-q2W" id="YIB-ow-YK0"/>
+                <outlet property="heightConstraint" destination="frb-EM-i4y" id="MG2-HP-Zvu"/>
                 <outlet property="label" destination="kB7-Zh-feA" id="8QE-Cc-Vnt"/>
                 <outlet property="topConstraint" destination="sDE-eX-bkX" id="NPd-h1-dzX"/>
+                <outlet property="widthConstraint" destination="xJN-jc-J3x" id="WNG-7q-hiJ"/>
             </connections>
         </view>
     </objects>

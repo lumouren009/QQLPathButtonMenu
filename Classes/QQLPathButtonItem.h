@@ -11,6 +11,8 @@
 @interface QQLPathButtonItemConfig : NSObject
 @property (nonatomic, assign) CGRect frame;
 @property (nonatomic, assign) CGFloat buttonLabelMargin;
+@property (nonatomic, assign) CGSize buttonSize;
+@property (nonatomic, assign) CGFloat fontSize;
 @end
 
 @interface QQLPathButtonItem : UIView

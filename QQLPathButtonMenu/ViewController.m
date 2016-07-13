@@ -25,8 +25,9 @@
   // Do any additional setup after loading the view, typically from a nib.
   
   QQLPathButtonItemConfig *cfg = [[QQLPathButtonItemConfig alloc]init];
-  cfg.frame = CGRectMake(0, 0, 40, 40);
+  cfg.frame = CGRectMake(0, 0, 60, 60);
   cfg.buttonLabelMargin = 10;
+  cfg.buttonSize = CGSizeMake(50, 50);
   
   QQLPathButtonItem *pathItem1 = [QQLPathButtonItem buttonWithConfig:cfg image:[UIImage imageNamed:@"PathEdit"] title:@"one"];
   pathItem1.expandAngle = M_PI_4;
