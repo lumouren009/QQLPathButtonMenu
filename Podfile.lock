@@ -1,0 +1,16 @@
+PODS:
+  - QQLPathButtonMenu (0.0.1)
+
+DEPENDENCIES:
+  - QQLPathButtonMenu (from `./`)
+
+EXTERNAL SOURCES:
+  QQLPathButtonMenu:
+    :path: ./
+
+SPEC CHECKSUMS:
+  QQLPathButtonMenu: 81cac0004c790007e9297508c82472ad199cebdb
+
+PODFILE CHECKSUM: 8053acf73cc7108a085bfbe891e9f8ebad5f7ee2
+
+COCOAPODS: 1.0.1
