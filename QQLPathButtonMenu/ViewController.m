@@ -54,10 +54,11 @@
   closeButton.frame = CGRectMake((self.view.frame.size.width - 72)/2.0, 500, 72, 72);
   [closeButton setBackgroundImage:[UIImage imageNamed:@"live_button_close"] forState:UIControlStateNormal];
   
-  QQLPathButtonMenuConfig *config = [[QQLPathButtonMenuConfig alloc]init];
-  config.backgroundViewColor = [UIColor lightGrayColor];
+  QQLPathMenuConfig *config = [[QQLPathMenuConfig alloc]init];
+  config.backgroundViewColor = [UIColor yellowColor];
   config.endRadius = 130.f;
   config.duration = 0.5;
+  config.frame = self.view.frame;
   pathMenu = [[QQLPathButtonMenu alloc]initWithMainButton:mainButton
                                               closeButton:closeButton
                                                menuArrays:@[pathItem1, pathItem2, pathItem3]

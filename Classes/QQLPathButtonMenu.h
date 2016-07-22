@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QQLPathButtonMenuConfig : NSObject
+@interface QQLPathMenuConfig : NSObject
 @property (nonatomic, assign) CGFloat endRadius; //直径
 @property (nonatomic, strong) UIColor *backgroundViewColor; //背景色
 @property (nonatomic, assign) NSTimeInterval duration; //动画时长
+@property (nonatomic, assign) CGRect frame;
 @end
 
 typedef void (^MenuClickBlock)(NSInteger buttonIndex);
@@ -23,5 +24,5 @@ typedef void (^MenuClickBlock)(NSInteger buttonIndex);
 - (instancetype)initWithMainButton:(UIButton*)mainButton
                        closeButton:(UIButton*)closeButton
                         menuArrays:(NSArray*)menusArray
-                            config:(QQLPathButtonMenuConfig*)config;
+                            config:(QQLPathMenuConfig*)config;
 @end

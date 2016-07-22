@@ -16,11 +16,11 @@ static CGFloat const kEndRadius = 120.0f;
 static float const kDuration = .3f;
 
 @interface QQLPathButtonMenu ()
-@property (nonatomic, strong) UIView *pathSuperView;
+@property (nonatomic, strong) UIView *pathContainerView;
 @property (nonatomic, weak) UIView *mainButtonSuperView;
 @property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) NSArray *menusArray;
-@property (nonatomic, strong) QQLPathButtonMenuConfig *config;
+@property (nonatomic, strong) QQLPathMenuConfig *config;
 @end
 
 @implementation QQLPathButtonMenu
@@ -28,17 +28,17 @@ static float const kDuration = .3f;
 - (instancetype)initWithMainButton:(UIButton *)mainButton
                        closeButton:(UIButton*)closeButton
                         menuArrays:(NSArray *)menusArray
-                            config:(QQLPathButtonMenuConfig *)config {
+                            config:(QQLPathMenuConfig *)config {
   if (self = [super initWithFrame:mainButton.frame]) {
     _config = config;
     [mainButton addTarget:self action:@selector(mainButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     self.mainButtonSuperView = mainButton.superview;
-    self.pathSuperView = [[UIView alloc]initWithFrame:mainButton.superview.frame];
-    self.pathSuperView.backgroundColor = config.backgroundViewColor;
+    self.pathContainerView = [[UIView alloc]initWithFrame:config.frame];
+    self.pathContainerView.backgroundColor = config.backgroundViewColor;
     
     self.closeButton = closeButton;
     [self.closeButton addTarget:self action:@selector(mainButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.pathSuperView addSubview:closeButton];
+    [self.pathContainerView addSubview:closeButton];
     
     [self setMenusArray:menusArray withMainButton:mainButton];
     self.menusArray = menusArray;
@@ -59,7 +59,7 @@ static float const kDuration = .3f;
 //      item.nearPoint = CGPointMake(mainButton.center.x + kNearRadius * cos(item.expandAngle), mainButton.center.y - kNearRadius * sin(item.expandAngle));
       item.endPoint = CGPointMake(mainButton.center.x + (_config.endRadius ?: kEndRadius) * cos(item.expandAngle), mainButton.center.y - kEndRadius * sin(item.expandAngle));
       item.hidden = YES;
-      [self.pathSuperView addSubview:item];
+      [self.pathContainerView addSubview:item];
     }
   }
 }
@@ -102,7 +102,7 @@ static float const kDuration = .3f;
 }
 
 -(void)expand {
-  [_mainButtonSuperView addSubview:self.pathSuperView];
+  [_mainButtonSuperView addSubview:self.pathContainerView];
   for (QQLPathButtonItem *item in self.menusArray) {
     [self expand:item scale:1];
   }
@@ -118,7 +118,7 @@ static float const kDuration = .3f;
 
 
 -(void)shrink {
-  [self.pathSuperView removeFromSuperview];
+  [self.pathContainerView removeFromSuperview];
   for (QQLPathButtonItem *item in self.menusArray) {
     [self shrink:item scale:.8];
   }
@@ -135,6 +135,6 @@ static float const kDuration = .3f;
 
 @end
 
-@implementation QQLPathButtonMenuConfig
+@implementation QQLPathMenuConfig
 
 @end
